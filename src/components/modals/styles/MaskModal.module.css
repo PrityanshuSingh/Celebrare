@@ -1,0 +1,118 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0c625c;
+}
+
+.modal h2, h3 {
+  margin: 5px;
+  color: #0c625c;
+}
+
+.maskOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.croppedImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maskedImage{
+  width: 400px;
+  height:300px;
+  border:2px solid #0c625c;
+  border-radius:20px;
+}
+
+.maskOptions button {
+  padding: 10px;
+  border: 1px solid #0c625c;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s;
+  color: black;
+  gap:20px
+}
+
+.maskOptions button:hover {
+  background-color: #0c625c;
+  border: 1px solid white;
+  color: white;
+}
+
+.previewContainer {
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .maskOptions {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+  }
+
+  .maskOptions button {
+    padding: 8px;
+  }
+
+  .croppedImageContainer img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .maskedImage{
+    width: 300px;
+    height:200px;
+    border:2px solid #0c625c;
+    border-radius:20px;
+  }
+
+  .maskOptions {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
+  }
+
+  .maskOptions button {
+    padding: 6px;
+  }
+
+  .croppedImageContainer img {
+    width: 90%;
+    height: auto;
+  }
+}

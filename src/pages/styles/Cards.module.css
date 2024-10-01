@@ -1,0 +1,103 @@
+.cardsContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+    gap: 27%;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.backButton span {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.cardsGridWrapper {
+    max-height: 430px;
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #34ffc222;
+    justify-content: center;
+}
+
+.cardsGridWrapper::-webkit-scrollbar {
+    width: 12px;
+}
+
+.cardsGridWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.cardsGridWrapper::-webkit-scrollbar-thumb {
+    background: #11867e;
+    border-radius: 10px;
+}
+
+.cardsGridWrapper::-webkit-scrollbar-thumb:hover {
+    background: #094b46;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header {
+        gap: 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        padding-top: 15px;
+        font-size: 1.5rem;
+    }
+
+    .backButton {
+        margin-right: 0;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+}

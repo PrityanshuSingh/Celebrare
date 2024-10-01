@@ -1,0 +1,17 @@
+/*
+  The Sample data is currently taken from session storage in base64 format.
+*/
+[
+  {
+    "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/...",
+    "description": "A beautiful sunset over the mountains."
+  },
+  {
+    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+    "description": "A serene beach with crystal clear water."
+  },
+  {
+    "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/...",
+    "description": "A bustling city skyline at night."
+  }
+]

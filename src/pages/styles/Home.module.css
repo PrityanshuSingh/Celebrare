@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Cursive&display=swap');
+
+.container {
+    position: absolute;
+    top: 10%; 
+    width: 90%;
+    height: 80%;
+    background-image: url('https://media.istockphoto.com/id/1491850625/photo/abstract-green-pastel-watercolor-stains-background-on-watercolor-paper-textured-for-design.webp?a=1&b=1&s=612x612&w=0&k=20&c=-6xKi1Egmf4XlxH9KiuZ4SX3rmNeHPaYws0QZ1rpaI8=');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 0;
+    filter: brightness(1.15);
+    border-radius: 30px;
+}
+
+.name {
+    font-family: 'Modern Cursive', cursive;
+}
+
+.Hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.backgroundShapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background-color: rgba(0, 128, 0, 0.311);
+    opacity: 0.5;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.rectangle {
+    width: 120px;
+    height: 60px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #0c625c;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.divider {
+    margin: 40px 0 0 6%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.backgroundShapes .shape:nth-child(1) {
+    top: 10%;
+    left: 20%;
+}
+
+.backgroundShapes .shape:nth-child(2) {
+    top: 30%;
+    right: 15%;
+}
+
+.backgroundShapes .shape:nth-child(3) {
+    bottom: 25%;
+    left: 5%;
+}
+
+.backgroundShapes .shape:nth-child(4) {
+    bottom: 10%;
+    right: 10%;
+}
+
+.backgroundShapes .shape:nth-child(5) {
+    top: 40%;
+    left: 50%;
+}
+
+.backgroundShapes .shape:nth-child(6) {
+    bottom: 15%;
+    left: 25%;
+}
+
+.splashScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}

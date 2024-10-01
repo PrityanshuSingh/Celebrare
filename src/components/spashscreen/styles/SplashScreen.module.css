@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Cursive&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.splashScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 48px;
+    color: #11867e;
+    font-family: 'Modern Cursive', cursive;
+    margin: 0;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
